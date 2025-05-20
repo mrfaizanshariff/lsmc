@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import { 
@@ -14,6 +15,7 @@ import {
 } from "@/components/ui/navigation-menu";
 import { ModeToggle } from '@/components/ui/mode-toggle';
 import { Menu, X } from 'lucide-react';
+import logo from '../../public/assets/logo.png'
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -47,10 +49,19 @@ export default function Header() {
     >
       <div className="container mx-auto flex items-center justify-between">
         <Link href="/" className="flex items-center space-x-2">
-          <div className="bg-[#ffc733] w-10 h-10 flex items-center justify-center rounded">
-            <span className="font-bold text-black text-xl">L</span>
+          <div className="bg-[#ffc733] w-16 h-10 flex items-center justify-center rounded">
+            {/* <span className="font-bold text-black text-xl">L</span> */}
+            <Image
+           src={logo.src}
+           alt="LSMC LOGO"
+           width={70}
+           height={50}
+           className="object-cover">
+            
+          </Image>
           </div>
-          <span className="font-bold text-xl">LSMC</span>
+          {/* <span className="font-bold text-xl">LSMC</span> */}
+          
         </Link>
         
         <div className="hidden lg:block">

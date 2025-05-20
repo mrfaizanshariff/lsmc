@@ -31,7 +31,10 @@ export default function RootLayout({
             <main className="flex-1">{children}</main>
             <Footer />
           </div>
+        
         </ThemeProvider>
+        <script src="https://cdn.botpress.cloud/webchat/v2.5/inject.js"></script>
+<script src="https://files.bpcontent.cloud/2025/05/20/17/20250520174259-6MW4VKCD.js"></script>
       </body>
     </html>
   );
